@@ -180,25 +180,29 @@ API
 
 ####
 TODO:
-- Coding
-[x] - create objCon class for uniformity betwen Cli & Serv
-[x] - create objData class for simulated low level exchange
-[x] - objData Send/Recieve
-[x] - objData Zipping
-[x] - objData Encryption
-[x] - objData pubKey Sync
-- Testing 
-[x] - Test Send / Recieve
-[x] - Test Zipping
-[x] - Test Encryption
-[x] - Test Splitting
-[x] - remove cb from source & testing
-[x] - update testing w/ random data
-[x] - Test Zip > Encrypt > Split > Send\Recieve > Join > Decrypt > Unzip
-[x] - Test objCon
-[x] - Doc API
-- Eventualy
-[ ] Rewrite objData.pack() and objData.unpack() to use a fixed length binnary header instead of dirty string manipulation
+> Coding 
+> [x] - create objCon class for uniformity betwen Cli & Serv
+> [x] - create objData class for simulated low level exchange
+> [x] - objData Send/Recieve
+> [x] - objData Zipping
+> [x] - objData Encryption
+> [x] - objData pubKey Sync
+-----------------------------
+> Testing 
+>[x] - Test Send / Recieve
+>[x] - Test Zipping
+>[x] - Test Encryption
+>[x] - Test Splitting
+>[x] - remove cb from source & testing
+>[x] - update testing w/ random data
+>[x] - Test Zip > Encrypt > Split > Send\Recieve > Join > Decrypt > Unzip
+>[x] - Test objCon
+>[x] - Doc API
+-----------------------------
+> Eventualy
+>[ ] Rewrite objData.pack() and objData.unpack() to use a fixed length binnary header instead of dirty string manipulation
+
+-----------------------------
 
 ####
 Disclaimer:
