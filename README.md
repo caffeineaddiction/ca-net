@@ -6,13 +6,11 @@ ca-net
 ######
 This lib creates a wrapper of sorts around the node.js's `net.createServer` and `net.connect`.  It sets up encrypted communication between a client and server using DiffieHellman Key Exchange, and `aes-256-cbc` encryption from node.js's `crypto`.  It also takes care of message compression and splitting.
 
-#
-Install
+##Install
 `npm install ca-net`
 
 
-#
-API
+##API
 
 > ca-net.client(Host, Port, API, callback) 
 > -----------------------------
@@ -178,6 +176,28 @@ API
 > 
 > **flg**: bool, internal var for connection initilization
 
-####
-Disclaimer:
+##TODO:
+> *Coding:*
+> - [x] create objCon class for uniformity betwen Cli & Serv
+> - [x] create objData class for simulated low level exchange
+> - [x] objData Send/Recieve
+> - [x] objData Zipping
+> - [x] objData Encryption
+> - [x] objData pubKey Sync
+> 
+> *Testing / Doc:*
+> - [x] Test Send / Recieve
+> - [x] Test Zipping
+> - [x] Test Encryption
+> - [x] Test Splitting
+> - [x] remove cb from source & testing
+> - [x] update testing w/ random data
+> - [x] Test Zip > Encrypt > Split > Send\Recieve > Join > Decrypt > Unzip
+> - [x] Test objCon
+> - [x] Doc API
+> 
+> *Eventualy:*
+> - [ ] Rewrite objData.pack() and objData.unpack() to use a fixed length binnary header instead of dirty string manipulation
+
+####Disclaimer:
 This is a toy project, and should not be used for production grade anything ... use at your own risk
