@@ -28,7 +28,7 @@ API
 > 
 > **callback**: function, *[optional]* Called on('connect') will pass arguments `net.Socket`,`objCon`
  
- -----------------------------
+&nbsp;
  
 > ca-net.server(Port, API, callback) 
 > -----------------------------
@@ -42,7 +42,7 @@ API
 > 
 > **callback**: function, *[optional]* Called on('listening') will pass arguments `net.Server`,`{'token':objCon}`
  
- -----------------------------
+&nbsp;
  
 > objData
 > ===
@@ -58,7 +58,7 @@ API
 >> 
 >> **data**: Buffer, *internal class*
 > 
-> -----------------------------
+> &nbsp;
 >
 >> ca-net.objData.destruct() 
 >> -----------------------------
@@ -66,7 +66,7 @@ API
 >> called at the tail of a recursive `objData.combine`, `objData.unpack`, `objData.pack`
 >> or when `objData` times out on `objData.ttl` *timeout*
 > 
-> -----------------------------
+> &nbsp;
 >
 >> ca-net.objData.combine(aObjData) 
 >> -----------------------------
@@ -78,7 +78,7 @@ API
 >> **aObjData**: objData, *internal function*
 >> called to join together data that has been split by `objData.pack`
 > 
-> -----------------------------
+> &nbsp;
 >
 >> ca-net.objData.send(data) 
 >> -----------------------------
@@ -89,7 +89,7 @@ API
 >> 
 >> **data**: Buffer, Data to send
 > 
-> -----------------------------
+> &nbsp;
 >
 >> ca-net.objData.recieve() 
 >> -----------------------------
@@ -98,7 +98,7 @@ API
 >> calls .unpack() on `data`
 >> creates new `objData` for remaining `data` and calls .recieve() on new `objData`
 > 
-> -----------------------------
+> &nbsp;
 >
 >> ca-net.objData.pack(c, z, s) 
 >> -----------------------------
@@ -114,7 +114,7 @@ API
 >> 
 >> **s**: bool, *[optional]* Special Flag *used for pubKey syncing*
 > 
-> -----------------------------
+> &nbsp;
 >
 >> ca-net.objData.unpack() 
 >> -----------------------------
@@ -122,7 +122,7 @@ API
 >> process `objData.data` before passing `objData.data` to `objData.objCon.API`
 >> join? > decrypt? > unzip?
  
- -----------------------------
+&nbsp;
  
 > objCon
 > ===
@@ -142,7 +142,7 @@ API
 >> 
 >> **API**: function, *[optional]*
 > 
-> -----------------------------
+> &nbsp;
 >
 >> ca-net.objCon.API(c, r) 
 >> -----------------------------
@@ -154,19 +154,19 @@ API
 >> 
 >> **r**: Buffer, Handles encryption setup on initial connection
 > 
-> -----------------------------
+> &nbsp;
 >
 >> ca-net.objCon.destruct() 
 >> -----------------------------
 >> destroys objCon on time out
 > 
-> -----------------------------
+> &nbsp;
 >
 >> ca-net.objCon.keepAlive() 
 >> -----------------------------
 >> updates `objCon.ttl` to keep connection from self destructing
 > 
-> -----------------------------
+> &nbsp;
 >
 > ca-net.objCon.send(msg, flg) 
 > -----------------------------
@@ -177,7 +177,6 @@ API
 > **msg**: Buffer, Message to send to remote connection
 > 
 > **flg**: bool, internal var for connection initilization
-
 
 ####
 Disclaimer:
