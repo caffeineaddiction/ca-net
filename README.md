@@ -166,15 +166,15 @@ This lib creates a wrapper of sorts around the node.js's `net.createServer` and 
 > 
 > &nbsp;
 >
-> ca-net.objCon.send(msg, flg) 
-> -----------------------------
-> send messages to remote connection
-> 
-> **Parameters**
-> 
-> **msg**: Buffer, Message to send to remote connection
-> 
-> **flg**: bool, internal var for connection initilization
+>> ca-net.objCon.send(msg, flg) 
+>> -----------------------------
+>> send messages to remote connection
+>> 
+>> **Parameters**
+>> 
+>> **msg**: Buffer, Message to send to remote connection
+>> 
+>> **flg**: bool, internal var for connection initilization
 
 ##TODO:
 > *Coding:*
