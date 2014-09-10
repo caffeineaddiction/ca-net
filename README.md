@@ -177,7 +177,7 @@ This lib creates a wrapper of sorts around the node.js's `net.createServer` and 
 >> **flg**: bool, internal var for connection initilization
 
 ##TODO:
-> *Coding:*
+> **Coding:**
 > - [x] ~~create objCon class for uniformity betwen Cli & Serv~~
 > - [x] ~~create objData class for simulated low level exchange~~
 > - [x] ~~objData Send/Recieve~~
@@ -185,7 +185,7 @@ This lib creates a wrapper of sorts around the node.js's `net.createServer` and 
 > - [x] ~~objData Encryption~~
 > - [x] ~~objData pubKey Sync~~
 > 
-> *Testing / Doc:*
+> **Testing / Doc:**
 > - [x] ~~Test Send / Recieve~~
 > - [x] ~~Test Zipping~~
 > - [x] ~~Test Encryption~~
@@ -196,7 +196,7 @@ This lib creates a wrapper of sorts around the node.js's `net.createServer` and 
 > - [x] ~~Test objCon~~
 > - [x] ~~Doc API~~
 > 
-> *Eventualy:*
+> **Eventualy:**
 > - [ ] Rewrite objData.pack() and objData.unpack() to use a fixed length binnary header instead of dirty string manipulation
 
 ####Disclaimer:
