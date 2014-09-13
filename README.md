@@ -195,6 +195,7 @@ This lib creates a wrapper of sorts around the node.js's `net.createServer` and 
 > - [x] ~~Test Zip > Encrypt > Split > Send\Recieve > Join > Decrypt > Unzip~~
 > - [x] ~~Test objCon~~
 > - [x] ~~Doc API~~
+> - [ ] Add Example Code
 > 
 > **Eventualy:**
 > - [ ] Rewrite objData.pack() and objData.unpack() to use a fixed length binnary header instead of dirty string manipulation
