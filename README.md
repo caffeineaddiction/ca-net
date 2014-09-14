@@ -184,6 +184,7 @@ This lib creates a wrapper of sorts around the node.js's `net.createServer` and 
 > - [x] ~~objData Zipping~~
 > - [x] ~~objData Encryption~~
 > - [x] ~~objData pubKey Sync~~
+> - [ ] add functionality for externaly checking if objCon.destruct() has been called
 > 
 > **Testing / Doc:**
 > - [x] ~~Test Send / Recieve~~
