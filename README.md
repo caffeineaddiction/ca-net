@@ -176,15 +176,6 @@ This lib creates a wrapper of sorts around the node.js's `net.createServer` and 
 >> 
 >> **flg**: bool, internal var for connection initilization
 
-##Known Issues:
-> Fixed ... needs updated in npm
-> ```
-> ...\ca-net\index.js:468
->         delete tConns[this.token];
->                ^
-> ReferenceError: tConns is not defined
-> ```
-
 ##TODO:
 > **Coding:**
 > - [x] ~~create objCon class for uniformity betwen Cli & Serv~~
