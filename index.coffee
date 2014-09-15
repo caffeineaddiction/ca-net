@@ -358,7 +358,6 @@ class objCon
       clearInterval(@loop)
     if @con?
       @con.end()
-    delete tConns[@token] if @token?
     return
 
   ctrl_loop: () ->
