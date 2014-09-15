@@ -464,9 +464,6 @@
       if (this.con != null) {
         this.con.end();
       }
-      if (this.token != null) {
-        delete tConns[this.token];
-      }
     };
 
     objCon.prototype.ctrl_loop = function() {
