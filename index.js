@@ -170,7 +170,9 @@
           pkt.destruct();
         }
       }
-      delete this.objCon.toJoin[this.pid];
+      if ((this.objCon != null) && 'toJoin' in this.objCon && this.pid in this.objCon.toJoin) {
+        delete this.objCon.toJoin[this.pid];
+      }
     };
 
 
