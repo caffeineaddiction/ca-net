@@ -1,6 +1,6 @@
 {
   "name": "ca-net",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Network Communication Mod",
   "main": "index.js",
   "scripts": {
