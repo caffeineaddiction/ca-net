@@ -33,6 +33,17 @@ __debug = true
 __ttl_time = 15
 
 ## Functions #################################################
+__onData = (objCon, data) ->
+  objCon.__bffr = Buffer.concat([objCon.__bffr, data]) if data?
+  if objCon.__bffr.length >= 2
+    tLen = objCon.__bffr.readUInt16BE(0)
+    if objCon.__bffr.length >= tLen + 2
+      tBuff = objCon.__bffr.slice(0,tLen + 2)
+      objCon.__bffr = objCon.__bffr.slice(tLen + 2, objCon.__bffr.length)
+      tData = new objData(objCon, tBuff)
+      tData.recieve()
+      __onData(objCon)
+
 init_SocketServ = (aPort, aAPI, callback) ->
   tConns = {}
   tServ = net.createServer( (c) ->
@@ -40,10 +51,10 @@ init_SocketServ = (aPort, aAPI, callback) ->
     cli_token = crypto.randomBytes(16).toString('base64')
     __logit "Client Connected #{cli_token.toString('base64')}" if __debug = false || not __debug?
     tConns[cli_token] = new objCon(c, cli_token, cli_address,aAPI)
+    tConns[cli_token].__bffr = new Buffer(0)
 
     c.on('data', (data) =>
-      tData = new objData(tConns[cli_token], data)
-      tData.recieve()
+      __onData(tConns[cli_token],data)
       return
       )
 
@@ -57,6 +68,7 @@ init_SocketServ = (aPort, aAPI, callback) ->
 
 init_SocketClient = (aHost, aPort, aAPI, callback) ->
   tConn = null
+  cli_bffr = new Buffer(0)
   c = net.connect( aPort, aHost, () -> 
     __logit "Connected [#{aHost}:#{aPort}]" if __debug = false || not __debug?
   ) 
@@ -66,10 +78,10 @@ init_SocketClient = (aHost, aPort, aAPI, callback) ->
     return
 
   tConn = new objCon(c,null,null,aAPI)
+  tConn.__bffr = new Buffer(0)
 
   c.on('data', (data) =>
-    tData = new objData(tConn, data)
-    tData.recieve()
+    __onData(tConn,data)
     return
     )
 
