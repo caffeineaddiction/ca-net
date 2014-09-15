@@ -129,7 +129,7 @@ class objData
     if @parts?
       for pkt in @parts
         pkt.destruct()
-    delete @objCon.toJoin[@pid]
+    delete @objCon.toJoin[@pid] if @objCon? && 'toJoin' of @objCon && @pid of @objCon.toJoin
     return
   ###*
  * *internal function*
